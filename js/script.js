@@ -1,5 +1,6 @@
 const app = new Vue (
       {
+
       el: "#root",
       data: {
             imgs: {
@@ -23,10 +24,8 @@ const app = new Vue (
                   if (this.imgIndex == this.imgs.url.length) {
                         this.imgIndex = 0;
                   }            
-            },
-            selectPoint: function() {
-                  selected = this.imgIndex;
             }
       }
+      
       }
 );
