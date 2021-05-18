@@ -1,0 +1,53 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+}
+
+body {
+      height: 100vh;
+      display: flex;
+}
+
+#root {
+      width: 800px;
+      height: 600px;
+      display: flex;
+      margin: auto;
+}
+
+#left,
+#right {
+      width: 50px;
+      height: 100%;
+      display: flex;
+}
+
+#center {
+      width: calc(100% - 100px);
+      height: 100%;
+      position: relative;
+}
+
+i {
+      margin: auto;
+      cursor: pointer;
+}
+#center i {
+      padding: 0 5px;
+      color: #ffffff;
+}
+
+img {
+      max-width: 100%;
+      height: 100%;
+      object-fit: cover;
+}
+
+#points {
+      display: inline-block;
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+}
