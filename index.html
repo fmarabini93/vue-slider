@@ -12,16 +12,16 @@
       <body>
             <div id="root">
                   <div id="left">
-                        <i @click = "prevImage" class="fas fa-chevron-left"></i>
+                        <i @mouseover="stopAutoPlay()" @click = "prevImage" class="fas fa-chevron-left"></i>
                   </div>
                   <div id="center">
                         <img :src="imgs.url[imgIndex]" :alt="imgs.alt[imgIndex]">
                         <div id="points">
-                              <i v-for="(img, index) in imgs.url" @click="selectedImage(index)" :class="index == imgIndex ? 'fas': 'far'" class="fa-circle"></i>
+                              <i v-for="(img, index) in imgs.url" @mouseover="stopAutoPlay()" @click="selectedImage(index)" :class="index == imgIndex ? 'fas': 'far'" class="fa-circle"></i>
                         </div>
                   </div>
                   <div id="right">
-                        <i @click = "nextImage" class="fas fa-chevron-right"></i>
+                        <i @mouseover="stopAutoPlay()" @click = "nextImage" class="fas fa-chevron-right"></i>
                   </div>
             </div>
          <script src="js/script.js"></script>   

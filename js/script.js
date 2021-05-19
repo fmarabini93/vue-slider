@@ -7,10 +7,11 @@ const app = new Vue (
                   url: ["img/img1.jpg", "img/img2.jpg", "img/img3.jpg", "img/img4.jpg"],
                   alt: ["Paesaggio1", "Paesaggio2", "Paesaggio3", "Paesaggio4"]           
             },
-            imgIndex: 0
+            imgIndex: 0,
+            autoPlay: null
       },
-      mounted: function() { // --> Slideshow 3s autoplay
-            setInterval(this.nextImage, 3000);
+      mounted: function autoPlay() { // --> Slideshow 3s autoplay
+            this.autoPlay = setInterval(this.nextImage, 3000);
       },     
       methods: {
             prevImage: function() {
@@ -27,6 +28,9 @@ const app = new Vue (
             },
             selectedImage: function(selectedIndex) {
                   this.imgIndex = selectedIndex;
+            },
+            stopAutoPlay: function() {
+                  clearInterval(this.autoPlay);
             }
       }
       
