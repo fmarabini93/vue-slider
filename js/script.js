@@ -24,6 +24,9 @@ const app = new Vue (
                   if (this.imgIndex == this.imgs.url.length) {
                         this.imgIndex = 0;
                   }            
+            },
+            selectedImage: function(selectedIndex) {
+                  this.imgIndex = selectedIndex;
             }
       }
       

@@ -17,7 +17,7 @@
                   <div id="center">
                         <img :src="imgs.url[imgIndex]" :alt="imgs.alt[imgIndex]">
                         <div id="points">
-                              <i v-for="n in imgs.url.length" :class="n == imgIndex + 1 ? 'fas': 'far'" class="fa-circle"></i>
+                              <i v-for="(img, index) in imgs.url" @click="selectedImage(index)" :class="index == imgIndex ? 'fas': 'far'" class="fa-circle"></i>
                         </div>
                   </div>
                   <div id="right">
